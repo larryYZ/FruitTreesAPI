@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Larry-admin:Empnew123@clusteralpha.5lsp9.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://Larry-admin:Empnew123@clusteralpha.5lsp9.mongodb.net/?retryWrites=true&w=majority/FruitTreeDB");
 
 const appleTreeSchema = {
   variety: String,
@@ -23,7 +23,7 @@ const appleTreeSchema = {
   taste: String,
   bloom: String,
   harvest: String
-};
+}; 
 
 const AppleTree = mongoose.model("AppleTree", appleTreeSchema);
 
