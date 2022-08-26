@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/fruitTreeDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Larry-admin:Empnew123@clusteralpha.5lsp9.mongodb.net/?retryWrites=true&w=majority");
 
 const appleTreeSchema = {
   variety: String,
@@ -123,7 +123,11 @@ app.route("/appleTrees/:appleTreeVariety")
 
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
-app.listen(3000, function(){
-  console.log("Server started on port 3000");
+app.listen(port, function(){
+  console.log("Server has started successfully.");
 });
