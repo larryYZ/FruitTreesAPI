@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Larry-admin:Empnew123@clusteralpha.5lsp9.mongodb.net/?retryWrites=true&w=majority/FruitTreeDB");
+mongoose.connect("mongodb+srv://Larry-admin:Empnew123@clusteralpha.5lsp9.mongodb.net/FruitTreeDB?retryWrites=true&w=majority");
 
 const appleTreeSchema = {
   variety: String,
