@@ -22,7 +22,8 @@ const appleTreeSchema = {
   zone: Number,
   taste: String,
   bloom: String,
-  harvest: String
+  harvest: String,
+  description: String
 }; 
 
 const AppleTree = mongoose.model("AppleTree", appleTreeSchema);
@@ -63,7 +64,8 @@ app.route("/appleTrees")
     zone: req.body.zone,
     taste: req.body.taste,
     bloom: req.body.bloom,
-    harvest: req.body.harvest
+    harvest: req.body.harvest,
+    description: req.body.description
   });
 
   newAppleTree.save(function(err){
@@ -98,7 +100,8 @@ app.route("/appleTrees/:appleTreeVariety")
       zone: req.body.zone,
       taste: req.body.taste,
       bloom: req.body.bloom,
-      harvest: req.body.harvest
+      harvest: req.body.harvest,
+      description: req.body.description
     },
     {overwrite: true},
     function(err){
